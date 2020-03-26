@@ -183,7 +183,6 @@ $('input:radio[name="attributes[deliverymethod]"]').change(
     });
 </script>
 
-
 <script>
   //prevent submission of cart if no delivery method selected at cart
 $(document).ready(function () {
