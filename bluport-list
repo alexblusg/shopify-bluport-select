@@ -1,0 +1,204 @@
+<style>
+  input[type="radio"] {
+    margin-top: -1px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  label {
+    display: inline-block;
+    width: 100%;
+  }
+  #bluportsnippet {
+    padding: 0 20px;
+  }
+  #noradio {
+    color: red;
+  }<!-- font color of warning note to make a home or bluport selection if none is selected-->
+
+</style>
+<label for="bluportlist">Confirm delivery method</label> 
+
+<p><input type="radio" id="deliverhome" name="attributes[deliverymethod]" value="deliverhome">Home/International Delivery or Store Collection</p>
+<p><input type="radio" id="deliverbluport" name="attributes[deliverymethod]" value="deliverbluport">bluPort Self-Collection (Singapore only)</p>
+<div id="bluportsnippet">
+<p class="cart-attribute__field" id="bluportlist" style="display: none;">
+  <label>Step 1: Look for your preferred bluPort <a href="https://blu.com.sg/locations" target="_blank">here</a></label>
+  <label>Step 2: Choose bluPort below (Sorted in alphabetical order)</label><br>
+  <select required class="required" id="choose-bluport" >
+    <option value="BSS"{% if cart.attributes["bluport-pickup"] == "BSS" %} selected{% endif %}>bluPort - *SCAPE</option>
+	<option value="BSP116"{% if cart.attributes["bluport-pickup"] == "BSP116" %} selected{% endif %}>bluPort - 116 Pending Rd</option>
+	<option value="BSG152"{% if cart.attributes["bluport-pickup"] == "BSG152" %} selected{% endif %}>bluPort - 152A Gangsa Rd</option>
+	<option value="BST168"{% if cart.attributes["bluport-pickup"] == "BST168" %} selected{% endif %}>bluPort - 168 Petir Rd</option>
+	<option value="BSL179"{% if cart.attributes["bluport-pickup"] == "BSL179" %} selected{% endif %}>bluPort - 179 Lompang Rd</option>
+	<option value="B1T"{% if cart.attributes["bluport-pickup"] == "B1T" %} selected{% endif %}>bluPort - 18 Tai Seng by Mapletree</option>
+	<option value="BST207"{% if cart.attributes["bluport-pickup"] == "BST207" %} selected{% endif %}>bluPort - 207 Petir Rd</option>
+	<option value="BAM"{% if cart.attributes["bluport-pickup"] == "BAM" %} selected{% endif %}>bluPort - 215 Ang Mo Kio Ave 1</option>
+	<option value="BSP228"{% if cart.attributes["bluport-pickup"] == "BSP228" %} selected{% endif %}>bluPort - 228 Pending Rd</option>
+	<option value="BER241"{% if cart.attributes["bluport-pickup"] == "BER241" %} selected{% endif %}>bluPort - 241 Bukit Panjang Ring Rd</option>
+	<option value="BEB252"{% if cart.attributes["bluport-pickup"] == "BEB252" %} selected{% endif %}>bluPort - 252 Bangkit Rd</option>
+	<option value="BEB270"{% if cart.attributes["bluport-pickup"] == "BEB270" %} selected{% endif %}>bluPort - 270 Bangkit Rd</option>
+	<option value="BEN409"{% if cart.attributes["bluport-pickup"] == "BEN409" %} selected{% endif %}>bluPort - 409 Saujana Rd</option>
+	<option value="BER432"{% if cart.attributes["bluport-pickup"] == "BER432" %} selected{% endif %}>bluPort - 432 Bukit Panjang Ring Rd</option>
+	<option value="BEF443"{% if cart.attributes["bluport-pickup"] == "BEF443" %} selected{% endif %}>bluPort - 443C Fajar Rd</option>
+	<option value="BEG472"{% if cart.attributes["bluport-pickup"] == "BEG472" %} selected{% endif %}>bluPort - 472 Segar Rd</option>
+	<option value="BNJ504"{% if cart.attributes["bluport-pickup"] == "BNJ504" %} selected{% endif %}>bluPort - 504 Jelapang Rd</option>
+	<option value="BNJ513"{% if cart.attributes["bluport-pickup"] == "BNJ513" %} selected{% endif %}>bluPort - 513 Jelapang Rd</option>
+	<option value="BNJ534"{% if cart.attributes["bluport-pickup"] == "BNJ534" %} selected{% endif %}>bluPort - 534 Jelapang Rd</option>
+	<option value="BNG547"{% if cart.attributes["bluport-pickup"] == "BNG547" %} selected{% endif %}>bluPort - 547B Segar Rd</option>
+	<option value="BNS604"{% if cart.attributes["bluport-pickup"] == "BNS604" %} selected{% endif %}>bluPort - 604 Senja Rd</option>
+	<option value="BNR609"{% if cart.attributes["bluport-pickup"] == "BNR609" %} selected{% endif %}>bluPort - 609 Bukit Panjang Ring Rd</option>
+	<option value="BNS627"{% if cart.attributes["bluport-pickup"] == "BNS627" %} selected{% endif %}>bluPort - 627 Senja Rd</option>
+	<option value="BNS651"{% if cart.attributes["bluport-pickup"] == "BNS651" %} selected{% endif %}>bluPort - 651 Senja Link</option>
+	<option value="BAT"{% if cart.attributes["bluport-pickup"] == "BAT" %} selected{% endif %}>bluPort - Alexandra Technopark</option>
+	<option value="BMP"{% if cart.attributes["bluport-pickup"] == "BMP" %} selected{% endif %}>bluPort - ALICE@Mediapolis</option>
+	<option value="BMK"{% if cart.attributes["bluport-pickup"] == "BMK" %} selected{% endif %}>bluPort - AMK Hub</option>
+	<option value="BAP"{% if cart.attributes["bluport-pickup"] == "BAP" %} selected{% endif %}>bluPort - Anchorpoint</option>
+	<option value="BAR"{% if cart.attributes["bluport-pickup"] == "BAR" %} selected{% endif %}>bluPort - Aperia Mall</option>
+	<option value="BBW"{% if cart.attributes["bluport-pickup"] == "BBW" %} selected{% endif %}>bluPort - Beauty World Centre</option>
+	<option value="BBK"{% if cart.attributes["bluport-pickup"] == "BBK" %} selected{% endif %}>bluPort - Bedok Point</option>
+	<option value="BBL"{% if cart.attributes["bluport-pickup"] == "BBL" %} selected{% endif %}>bluPort - Boon Lay MRT</option>
+	<option value="BBT"{% if cart.attributes["bluport-pickup"] == "BBT" %} selected{% endif %}>bluPort - BTC Centre</option>
+	<option value="BBC"{% if cart.attributes["bluport-pickup"] == "BBC" %} selected{% endif %}>bluPort - Bugis Cube</option>
+	<option value="BBP"{% if cart.attributes["bluport-pickup"] == "BBP" %} selected{% endif %}>bluPort - Bukit Panjang MRT</option>
+	<option value="BCS"{% if cart.attributes["bluport-pickup"] == "BCS" %} selected{% endif %}>bluPort - Century Square</option>
+	<option value="AEJ"{% if cart.attributes["bluport-pickup"] == "AEJ" %} selected{% endif %}>bluPort - Cheers, 10 Jurong West Ave 1</option>
+	<option value="ABD"{% if cart.attributes["bluport-pickup"] == "ABD" %} selected{% endif %}>bluPort - Cheers, 109 Toa Payoh Lorong 1</option>
+	<option value="ABS"{% if cart.attributes["bluport-pickup"] == "ABS" %} selected{% endif %}>bluPort - Cheers, 282 Bishan St 22</option>
+	<option value="ACK"{% if cart.attributes["bluport-pickup"] == "ACK" %} selected{% endif %}>bluPort - Cheers, 303 Choa Chu Kang Ave 4</option>
+	<option value="AHC"{% if cart.attributes["bluport-pickup"] == "AHC" %} selected{% endif %}>bluPort - Cheers, 810 Hougang Central</option>
+	<option value="ARV"{% if cart.attributes["bluport-pickup"] == "ARV" %} selected{% endif %}>bluPort - Cheers, Rivervale Mall</option>
+	<option value="ATJ"{% if cart.attributes["bluport-pickup"] == "ATJ" %} selected{% endif %}>bluPort - Cheers, Tanjong Pagar Centre</option>
+	<option value="AVP"{% if cart.attributes["bluport-pickup"] == "AVP" %} selected{% endif %}>bluPort - Cheers, Vista Point</option>
+	<option value="BCJ"{% if cart.attributes["bluport-pickup"] == "BCJ" %} selected{% endif %}>bluPort - Chijmes</option>
+	<option value="BCG"{% if cart.attributes["bluport-pickup"] == "BCG" %} selected{% endif %}>bluPort - Chinese Garden MRT</option>
+	<option value="BCL"{% if cart.attributes["bluport-pickup"] == "BCL" %} selected{% endif %}>bluPort - CityLink Mall</option>
+	<option value="BCQ"{% if cart.attributes["bluport-pickup"] == "BCQ" %} selected{% endif %}>bluPort - Clarke Quay</option>
+	<option value="BCM"{% if cart.attributes["bluport-pickup"] == "BCM" %} selected{% endif %}>bluPort - Clementi Mall</option>
+	<option value="BCO"{% if cart.attributes["bluport-pickup"] == "BCO" %} selected{% endif %}>bluPort - Compass One</option>
+	<option value="BCN"{% if cart.attributes["bluport-pickup"] == "BCN" %} selected{% endif %}>bluPort - Cross Street Exchange</option>
+	<option value="BDG"{% if cart.attributes["bluport-pickup"] == "BDG" %} selected{% endif %}>bluPort - DUO Galleria</option>
+	<option value="BEH"{% if cart.attributes["bluport-pickup"] == "BEH" %} selected{% endif %}>bluPort - E!Hub</option>
+	<option value="BEV"{% if cart.attributes["bluport-pickup"] == "BEV" %} selected{% endif %}>bluPort - East Village</option>
+	<option value="BXM"{% if cart.attributes["bluport-pickup"] == "BXM" %} selected{% endif %}>bluPort - Extra Space, Marymount</option>
+	<option value="AEY"{% if cart.attributes["bluport-pickup"] == "AEY" %} selected{% endif %}>bluPort - FairPrice Xpress, 10 Yishun Ave 9</option>
+	<option value="AEP"{% if cart.attributes["bluport-pickup"] == "AEP" %} selected{% endif %}>bluPort - FairPrice Xpress, 211 Punggol Rd</option>
+	<option value="AEE"{% if cart.attributes["bluport-pickup"] == "AEE" %} selected{% endif %}>bluPort - FairPrice Xpress, 239 East Coast Rd</option>
+	<option value="AEO"{% if cart.attributes["bluport-pickup"] == "AEO" %} selected{% endif %}>bluPort - FairPrice Xpress, 708 Mountbatten Rd</option>
+	<option value="BEF445"{% if cart.attributes["bluport-pickup"] == "BEF445" %} selected{% endif %}>bluPort - Fajar Shopping Centre</option>
+	<option value="BFP"{% if cart.attributes["bluport-pickup"] == "BFP" %} selected{% endif %}>bluPort - Farrer Park</option>
+	<option value="BFT"{% if cart.attributes["bluport-pickup"] == "BFT" %} selected{% endif %}>bluPort - Frasers Tower</option>
+	<option value="BGT"{% if cart.attributes["bluport-pickup"] == "BGT" %} selected{% endif %}>bluPort - Goldbell Towers</option>
+	<option value="BNJ524"{% if cart.attributes["bluport-pickup"] == "BNJ524" %} selected{% endif %}>bluPort - Greenridge Shopping Centre</option>
+	<option value="BHF"{% if cart.attributes["bluport-pickup"] == "BHF" %} selected{% endif %}>bluPort - HarbourFront Centre</option>
+	<option value="BHM"{% if cart.attributes["bluport-pickup"] == "BHM" %} selected{% endif %}>bluPort - Hillion Mall</option>
+	<option value="BJK"{% if cart.attributes["bluport-pickup"] == "BJK" %} selected{% endif %}>bluPort - Jackson Square</option>
+	<option value="BBM"{% if cart.attributes["bluport-pickup"] == "BBM" %} selected{% endif %}>bluPort - Jalan Bukit Merah</option>
+	<option value="BJC"{% if cart.attributes["bluport-pickup"] == "BJC" %} selected{% endif %}>bluPort - JCube</option>
+	<option value="BJS"{% if cart.attributes["bluport-pickup"] == "BJS" %} selected{% endif %}>bluPort - Jelita Shopping Centre</option>
+	<option value="BJM"{% if cart.attributes["bluport-pickup"] == "BJM" %} selected{% endif %}>bluPort - JEM</option>
+	<option value="BJU"{% if cart.attributes["bluport-pickup"] == "BJU" %} selected{% endif %}>bluPort - Junction 8</option>
+	<option value="BJP"{% if cart.attributes["bluport-pickup"] == "BJP" %} selected{% endif %}>bluPort - Jurong Point</option>
+	<option value="BOK"{% if cart.attributes["bluport-pickup"] == "BOK" %} selected{% endif %}>bluPort - KINEX</option>
+	<option value="BLS"{% if cart.attributes["bluport-pickup"] == "BLS" %} selected{% endif %}>bluPort - Lakeside MRT</option>
+	<option value="BLC"{% if cart.attributes["bluport-pickup"] == "BLC" %} selected{% endif %}>bluPort - Liang Court</option>
+	<option value="BMM"{% if cart.attributes["bluport-pickup"] == "BMM" %} selected{% endif %}>bluPort - Macpherson Mall</option>
+	<option value="BLM"{% if cart.attributes["bluport-pickup"] == "BLM" %} selected{% endif %}>bluPort - Marina Bay Link Mall</option>
+	<option value="BMW"{% if cart.attributes["bluport-pickup"] == "BMW" %} selected{% endif %}>bluPort - Millenia Walk</option>
+	<option value="BMV"{% if cart.attributes["bluport-pickup"] == "BMV" %} selected{% endif %}>bluPort - myVillage</option>
+	<option value="BCR"{% if cart.attributes["bluport-pickup"] == "BCR" %} selected{% endif %}>bluPort - New ECON Minimart, 78 Circuit Rd</option>
+	<option value="BNP"{% if cart.attributes["bluport-pickup"] == "BNP" %} selected{% endif %}>bluPort - NUS Prince George's Park</option>
+	<option value="BNC"{% if cart.attributes["bluport-pickup"] == "BNC" %} selected{% endif %}>bluPort - NUS School of Computing</option>
+	<option value="BNU"{% if cart.attributes["bluport-pickup"] == "BNU" %} selected{% endif %}>bluPort - NUS UTown</option>
+	<option value="BOR"{% if cart.attributes["bluport-pickup"] == "BOR" %} selected{% endif %}>bluPort - One Raffles Place</option>
+	<option value="BRQ"{% if cart.attributes["bluport-pickup"] == "BRQ" %} selected{% endif %}>bluPort - One Raffles Quay</option>
+	<option value="BOG"{% if cart.attributes["bluport-pickup"] == "BOG" %} selected{% endif %}>bluPort - Orchard Gateway</option>
+	<option value="BOB"{% if cart.attributes["bluport-pickup"] == "BOB" %} selected{% endif %}>bluPort - Oxley Bizhub</option>
+	<option value="BPQ"{% if cart.attributes["bluport-pickup"] == "BPQ" %} selected{% endif %}>bluPort - Paya Lebar Quarter</option>
+	<option value="BPS"{% if cart.attributes["bluport-pickup"] == "BPS" %} selected{% endif %}>bluPort - Plaza Singapura</option>
+	<option value="BPR"{% if cart.attributes["bluport-pickup"] == "BPR" %} selected{% endif %}>bluPort - Prinsep Street Residences</option>
+	<option value="BPJ"{% if cart.attributes["bluport-pickup"] == "BPJ" %} selected{% endif %}>bluPort - PSA Pasir Panjang Terminal Building 3</option>
+	<option value="BPP"{% if cart.attributes["bluport-pickup"] == "BPP" %} selected{% endif %}>bluPort - Punggol Plaza</option>
+	<option value="BRV"{% if cart.attributes["bluport-pickup"] == "BRV" %} selected{% endif %}>bluPort - Ridge View Residential College</option>
+	<option value="BRW"{% if cart.attributes["bluport-pickup"] == "BRW" %} selected{% endif %}>bluPort - Robertson Walk</option>
+	<option value="BRM"{% if cart.attributes["bluport-pickup"] == "BRM" %} selected{% endif %}>bluPort - Rochester Mall</option>
+	<option value="BSB"{% if cart.attributes["bluport-pickup"] == "BSB" %} selected{% endif %}>bluPort - Sembawang Shopping Centre</option>
+	<option value="BSC"{% if cart.attributes["bluport-pickup"] == "BSC" %} selected{% endif %}>bluPort - Serene Centre</option>
+	<option value="BSL"{% if cart.attributes["bluport-pickup"] == "BSL" %} selected{% endif %}>bluPort - Sim Lim Square</option>
+	<option value="BIT"{% if cart.attributes["bluport-pickup"] == "BIT" %} selected{% endif %}>bluPort - SIT Dover</option>
+	<option value="BSM"{% if cart.attributes["bluport-pickup"] == "BSM" %} selected{% endif %}>bluPort - SMU Li Ka Shing Library</option>
+	<option value="BSK"{% if cart.attributes["bluport-pickup"] == "BSK" %} selected{% endif %}>bluPort - Stars of Kovan</option>
+	<option value="BSP"{% if cart.attributes["bluport-pickup"] == "BSP" %} selected{% endif %}>bluPort - Sun Plaza</option>
+	<option value="BTD"{% if cart.attributes["bluport-pickup"] == "BTD" %} selected{% endif %}>bluPort - SUTD</option>
+	<option value="BTP"{% if cart.attributes["bluport-pickup"] == "BTP" %} selected{% endif %}>bluPort - Tampines Mall</option>
+	<option value="BTM"{% if cart.attributes["bluport-pickup"] == "BTM" %} selected{% endif %}>bluPort - Tanglin Mall</option>
+	<option value="BTA"{% if cart.attributes["bluport-pickup"] == "BTA" %} selected{% endif %}>bluPort - The Arcade</option>
+	<option value="BTC"{% if cart.attributes["bluport-pickup"] == "BTC" %} selected{% endif %}>bluPort - The Cathay</option>
+	<option value="BCP"{% if cart.attributes["bluport-pickup"] == "BCP" %} selected{% endif %}>bluPort - The Centrepoint</option>
+	<option value="BGS"{% if cart.attributes["bluport-pickup"] == "BGS" %} selected{% endif %}>bluPort - The Grandstand</option>
+	<option value="BMT"{% if cart.attributes["bluport-pickup"] == "BMT" %} selected{% endif %}>bluPort - The Midtown</option>
+	<option value="BPZ"{% if cart.attributes["bluport-pickup"] == "BPZ" %} selected{% endif %}>bluPort - The Poiz Centre</option>
+	<option value="BSV"{% if cart.attributes["bluport-pickup"] == "BSV" %} selected{% endif %}>bluPort - The Star Vista</option>
+	<option value="BTS"{% if cart.attributes["bluport-pickup"] == "BTS" %} selected{% endif %}>bluPort - Thomson Plaza</option>
+	<option value="BTB"{% if cart.attributes["bluport-pickup"] == "BTB" %} selected{% endif %}>bluPort - Tiong Bahru Plaza</option>
+	<option value="BTO"{% if cart.attributes["bluport-pickup"] == "BTO" %} selected{% endif %}>bluPort - TripleOne Somerset</option>
+	<option value="BBH"{% if cart.attributes["bluport-pickup"] == "BBH" %} selected{% endif %}>bluPort - UE Bizhub East</option>
+	<option value="BUS"{% if cart.attributes["bluport-pickup"] == "BUS" %} selected{% endif %}>bluPort - United Square</option>
+	<option value="BVP"{% if cart.attributes["bluport-pickup"] == "BVP" %} selected{% endif %}>bluPort - Valley Point</option>
+	<option value="BVL"{% if cart.attributes["bluport-pickup"] == "BVL" %} selected{% endif %}>bluPort - Velocity</option>
+	<option value="BVI"{% if cart.attributes["bluport-pickup"] == "BVI" %} selected{% endif %}>bluPort - Viva Business Park</option>
+	<option value="BWM"{% if cart.attributes["bluport-pickup"] == "BWM" %} selected{% endif %}>bluPort - West Mall</option>
+	<option value="BWT"{% if cart.attributes["bluport-pickup"] == "BWT" %} selected{% endif %}>bluPort - Wisteria Mall</option>
+	<option value="BYT"{% if cart.attributes["bluport-pickup"] == "BYT" %} selected{% endif %}>bluPort - YewTee Point</option>
+  </select>
+  <label>Step 3: On 'Information' page, enter shipping address as usual (or home address)</label>
+  <label>Step 4: On 'Shipping' page, select bluPort option</label>
+</p>
+<p id="noradio"></p>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  //show bluPort list if bluPort delivery method selected
+  $('input[type="radio"]').click(function(){
+        if($(this).attr("id")=="deliverhome"){
+            $("#bluportlist").hide();
+        }
+        if($(this).attr("id")=="deliverbluport"){
+            $("#bluportlist").show();
+
+        }        
+    });
+</script>
+
+<script>
+  //prevent submission of bluport-pickup cart attribute if home delivery is selected
+$('input:radio[name="attributes[deliverymethod]"]').change(
+    function(){
+        if ($(this).val() == 'deliverbluport') {
+            $("#choose-bluport").attr("name", "attributes[bluport-pickup]");
+        }
+        else {
+            $("#choose-bluport").removeAttr('name');
+        }
+    });
+</script>
+
+
+<script>
+  //prevent submission of cart if no delivery method selected at cart
+$(document).ready(function () {
+    $("#cart-checkout").click(function (e) {
+        var none_answered = true;
+        $("input:radio").each(function () {
+            var name = $(this).attr("name");
+            if ($("input:radio[name]:checked").length == 0) {
+                e.preventDefault();
+                none_answered = false;
+            }
+        });
+        if (none_answered == false) {
+            $('#noradio').html("Please confirm a delivery method");
+        }
+    })  
+});
+</script>
