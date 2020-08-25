@@ -125,7 +125,7 @@
     {% elsif attributes.bluport-pickup contains "BWT" %}'<p>bluPort - Wisteria Mall</p>'
     {% elsif attributes.bluport-pickup contains "BYT" %}'<p>bluPort - YewTee Point</p>'
     {% elsif attributes.bluport-pickup contains "BY2" %}'<p>bluPort - YewTee Point 2</p>'{% endif %},
-    '<p>If you do not receive a Whatsapp/SMS <i>ready to collect</i> notification, please contact us at contact@brand.com</p>'
+    '<p>If you do not receive a Whatsapp/SMS <i>ready to collect</i> notification after 2 days, please contact us at contact@brand.com</p>'
     )
   {% endif %}
 
