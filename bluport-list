@@ -18,8 +18,8 @@
 </style>
 <label for="bluportlist">Confirm delivery method</label> 
 
-<p><input type="radio" id="deliverhome" name="attributes[deliverymethod]" value="deliverhome">Home/International Delivery or Store Collection</p>
-<p><input type="radio" id="deliverbluport" name="attributes[deliverymethod]" value="deliverbluport">bluPort Self-Collection (Singapore only)</p>
+<label><input type="radio" id="deliverhome" name="attributes[deliverymethod]" value="deliverhome"> Home/International Delivery or Store Collection</label>
+<label><input type="radio" id="deliverbluport" name="attributes[deliverymethod]" value="deliverbluport"> bluPort Self-Collection (Singapore only)</label>
 <div id="bluportsnippet">
 <p class="cart-attribute__field" id="bluportlist" style="display: none;">
   <label>Step 1: Look for your preferred bluPort <a href="https://blu.com.sg/locations" target="_blank">here</a></label>
